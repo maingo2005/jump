@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +10,7 @@ public class ArrowDraw : MonoBehaviour
 
     void Start()
     {
-        // –îˆó‚ğÁ‚·
+        // çŸ¢å°ã‚’æ¶ˆã™
         arrowImage.gameObject.SetActive(false);
     }
 
@@ -18,27 +18,28 @@ public class ArrowDraw : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            // ƒhƒ‰ƒbƒOŠJnˆÊ’uiƒXƒNƒŠ[ƒ“‹óŠÔ‚ÌÀ•Wj‚ğ•Û‘¶‚·‚é
+            // ãƒ‰ãƒ©ãƒƒã‚°é–‹å§‹ä½ç½®ï¼ˆã‚¹ã‚¯ãƒªãƒ¼ãƒ³ç©ºé–“ã®åº§æ¨™ï¼‰ã‚’ä¿å­˜ã™ã‚‹
             clickPosition = Input.mousePosition;
-            // –îˆó‚ğ•\¦‚·‚é
+            arrowImage.rectTransform.sizeDelta = Vector2.zero;
+            // çŸ¢å°ã‚’è¡¨ç¤ºã™ã‚‹
             arrowImage.gameObject.SetActive(true);
-        }   // ƒ}ƒEƒX¶ƒ{ƒ^ƒ“(0)‚ªƒvƒŒƒXi‰Ÿ‰ºj‚³‚ê‚½‚±‚Æ‚ğŒŸo‚·‚é
+        }   // ãƒã‚¦ã‚¹å·¦ãƒœã‚¿ãƒ³(0)ãŒãƒ—ãƒ¬ã‚¹ï¼ˆæŠ¼ä¸‹ï¼‰ã•ã‚ŒãŸã“ã¨ã‚’æ¤œå‡ºã™ã‚‹
         else if (Input.GetMouseButton(0))
         {
-            // –îˆó‚ğˆÚ“®‚·‚é
+            // çŸ¢å°ã‚’ç§»å‹•ã™ã‚‹
             arrowImage.rectTransform.position = clickPosition;
-            // ƒhƒ‰ƒbƒO‚Æ‹t•ûŒü‚ÌƒxƒNƒgƒ‹‚ğŒvZ‚·‚é
+            // ãƒ‰ãƒ©ãƒƒã‚°ã¨é€†æ–¹å‘ã®ãƒ™ã‚¯ãƒˆãƒ«ã‚’è¨ˆç®—ã™ã‚‹
             Vector2 dragVector = clickPosition - Input.mousePosition;
-            // –îˆó‚ğƒxƒNƒgƒ‹‚Ì•ûŒü‚ÉŒü‚¯‚é
+            // çŸ¢å°ã‚’ãƒ™ã‚¯ãƒˆãƒ«ã®æ–¹å‘ã«å‘ã‘ã‚‹
             arrowImage.rectTransform.right = dragVector;
-            // ƒhƒ‰ƒbƒO‚ÌƒxƒNƒgƒ‹‚Ì‹——£‚ğ‹‚ß‚é
+            // ãƒ‰ãƒ©ãƒƒã‚°ã®ãƒ™ã‚¯ãƒˆãƒ«ã®è·é›¢ã‚’æ±‚ã‚ã‚‹
             float size = dragVector.magnitude;
-            // ‰æ‘œ‚ÌƒTƒCƒY‚ğ•Ï‚¦‚é
+            // ç”»åƒã®ã‚µã‚¤ã‚ºã‚’å¤‰ãˆã‚‹
             arrowImage.rectTransform.sizeDelta = new Vector2(size, size);
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            // –îˆó‚ğÁ‚·
+            // çŸ¢å°ã‚’æ¶ˆã™
             arrowImage.gameObject.SetActive(false);
         }
     }
