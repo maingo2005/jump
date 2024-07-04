@@ -28,6 +28,7 @@ public class Item : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         _audioSource.Play();
         _anim.SetBool("isGet", true);
+
         //_anim.Play("Get");
         //Debug.Log(other.name + " ‚ªÚG‚µ‚½");
         //Destroy(gameObject);

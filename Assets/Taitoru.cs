@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Taitoru : MonoBehaviour
 {
-
     public void LoadScene()
     {
         Debug.Log("test");
         SceneManager.LoadScene("SampleScene");
     }
+
     // Start is called before the first frame update
     void Start()
     {
